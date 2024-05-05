@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #242424;
+}
+
+#app {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.text_shadow {
+  text-shadow: 0 0 10px black;
+}
+
+  .carousel__prev, .carousel__next {
+    background-color: #1d232a !important;
+    border-radius: 100% !important;
+    border: 1px solid #fff !important;
+  }
+
+@media all and (min-width: 1300px) {
+  .carousel__prev {
+    left: -40px !important;
+  }
+
+  .carousel__next {
+    right: -40px !important;
+  }
+}
+
+.carousel__prev--disabled, .carousel__next--disabled {
+  opacity: 0.2 !important;
+  transition: opacity 0.2s !important;
+}
+
+.carousel__icon {
+  fill: white !important
+}
+
+.carousel__slide {
+  align-items: baseline;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
